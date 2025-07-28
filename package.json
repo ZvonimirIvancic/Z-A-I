@@ -3,17 +3,6 @@
   "displayName": "zivancic-ext",
   "description": "AI for ZI",
   "version": "0.0.1",
-  "publisher": "Zvonimir Ivancic",
-  "license": "NPOSL-3.0",
-  "author": "Zvonimir Ivancic",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ZvonimirIvancic/Z-A-I.git"
-  },
-  "bugs": {
-    "url": "https://github.com/ZvonimirIvancic/Z-A-I/issues"
-  },
-  "homepage": "https://github.com/ZvonimirIvancic/Z-A-I#readme",
   "engines": {
     "vscode": "^1.102.0"
   },
@@ -25,8 +14,8 @@
   "contributes": {
     "commands": [
       {
-        "command": "zi.hiMom",
-        "title": "HiMom"
+        "command": "zi.bokKoder",
+        "title": "bokKoder"
       }
     ]
   },
