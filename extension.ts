@@ -4,10 +4,10 @@ import ollama from 'ollama';
 export function activate(context: vscode.ExtensionContext) {
     console.log('"zivancic-ext" is now active!');
 
-    const disposable = vscode.commands.registerCommand('zi.hiMom', () => {
+    const disposable = vscode.commands.registerCommand('zi.bokKoder', () => {
         const panel = vscode.window.createWebviewPanel(
             'ZI',
-            'Znanstvena Inteligencija Chat',
+            'Znanstveno Inkodiranje',
             vscode.ViewColumn.One,
             { enableScripts: true }
         );
@@ -21,7 +21,7 @@ export function activate(context: vscode.ExtensionContext) {
 
                 try {
                     const streamResponse = await ollama.chat({
-                        model: 'deepseek-coder-v2:latest',
+                        model: 'deepseek-coder-v2:16b',
                         messages: [{ role: 'user', content: userPrompt }],
                         stream: true
                     });
@@ -41,7 +41,7 @@ export function activate(context: vscode.ExtensionContext) {
 }
 
 function getWebviewContent(): string {
-    return /*html*/`
+    return /*html*/ `
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -53,9 +53,9 @@ function getWebviewContent(): string {
   </style>
 </head>
 <body>
-  <h2>DubokoTrazeci VS Code Extension</h2>
+  <h2>DubokoTrazeci Koder</h2>
   <textarea id="prompt" rows="3" placeholder="Pitaj nesto..."></textarea><br />
-  <button id="askBtn">Ask</button>
+  <button id="askBtn">Pitaj</button>
   <div id="response"></div>
 
 <script>
